@@ -1,11 +1,15 @@
 {
-  "name": "backend-project",
-  "version": "1.0.0",
-  "description": "A backwnd at my github Project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Gautam Rana",
-  "license": "ISC"
+    "name": "backend-project",
+    "version": "1.0.0",
+    "description": "A backwnd at my github Project",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon src/index.js"
+    },
+    "author": "Gautam Rana",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^3.1.3"
+    }
 }
