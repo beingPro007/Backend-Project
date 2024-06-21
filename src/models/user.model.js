@@ -51,6 +51,8 @@ userSchema.pre("save", async function(next) {
     next()
 })
 
+//custom methods for userSchema ---> used for custom middleware implementations ---> starts with methods
+
 userSchema.methods.isPasswordCorrect = async function(password) {
     await bcrypt.compare(password, this.password);
 }
