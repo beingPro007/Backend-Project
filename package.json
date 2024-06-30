@@ -1,7 +1,7 @@
 {
     "name": "backend-project",
     "version": "1.0.0",
-    "description": "A backwnd at my github Project",
+    "description": "A backend at my github Project",
     "type": "module",
     "main": "index.js",
     "scripts": {
