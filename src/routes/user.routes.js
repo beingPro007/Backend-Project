@@ -37,14 +37,14 @@ router.route("/login").post(loginUser);
 router.route("/logout").post(verifyJwt, logoutUser);
 router.route("/refresh-token").post(refreshAccessToken);
 router.route("/change-password").post(verifyJwt, changeCurrPassword);
-router.route("/change-currentUser").get(verifyJwt, getCurrentUser);
+router.route("/current-user").get(verifyJwt, getCurrentUser);
 router.route("/updateAccountDetails").patch(verifyJwt, updateAccountDetails);
 router
-    .route("/avatar")
-    .patch(verifyJwt, upload.single(avatar), updateUserAvatar);
+    .route("/updateUserAvatar")
+    .patch(verifyJwt, upload.single("avatar"), updateUserAvatar);
 router
     .route("/cover-image")
-    .patch(verifyJwt, upload.single(coverImage), updateUserCoverImage);
+    .patch(verifyJwt, upload.single("coverImage"), updateUserCoverImage);
 router.route("/c/:username").get(verifyJwt, getUserChannelProfile);
 router.route("/History").get(verifyJwt, getWatchHistory);
 
